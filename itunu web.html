@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Itunuolowa 💖 (developed by Pabsinc)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Great Vibes', cursive;
+      background-image: url('https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=600');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      backdrop-filter: brightness(0.6);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 1.8rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    #extra-message {
+      margin-top: 20px;
+      font-size: 1.6rem;
+      display: none;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>To My Dearest Itunuolowa 💌</h1>
+    <p class="message" id="main-message">
+      From the moment I met you, my world became brighter. You bring joy, peace, and endless love into my life.
+      Every moment with you is a treasure, and every memory a story I want to live again and again.
+    </p>
+    <button onclick="showMore()">Click for a surprise 💕</button>
+    <p id="extra-message"></p>
+  </div>
+  <script>
+    const messages = [
+      "You are my forever and always. 🌟💖",
+      "Just thinking about you makes me smile. 😊",
+      "You're the reason my heart beats faster. 💓",
+      "Every day with you is my favorite day. 🥰",
+      "I still get butterflies when I see your name pop up. 🦋",
+      "You light up my darkest days. ✨",
+      "Your smile is my sunshine. ☀️",
+      "With you, everything feels right. 💫",
+      "You're the most beautiful chapter of my life. 📖❤️",
+      "Loving you is my favorite adventure. 🌍💖",
+      "You're not just my love — you're my best friend. 👩‍❤️‍👨",
+      "You make every ordinary moment extraordinary. 🌈",
+      "I love you more each day. 📆💓",
+      "My heart beats for you, always. 💘",
+      "You're my peace in this chaotic world. 🕊️",
+      "Forever isn’t long enough with you. ♾️❤️",
+      "You’re the dream I never want to wake up from. 💤💕",
+      "You're the answer to every love song. 🎵❤️",
+      "Every second with you is a blessing. ⏳💖",
+      "My soul found its home in you. 🏡💞",
+      "You're the art my heart has been painting forever. 🎨💕",
+      "With you, love is effortless. 💗",
+      "You make my heart do a happy dance. 💃🕺",
+      "You’re the sweetest part of my day. 🍬❤️",
+      "My love for you is endless, like the stars. 🌌✨",
+      "You're the calm to my storm. 🌧️❤️🌤️",
+      "Every hug from you feels like home. 🤗",
+      "You're the melody my heart hums all day. 🎶💞",
+      "You are my happily ever after. 📚💖",
+      "Life with you is my favorite story. 📖🥰",
+      "You're the wish I whispered to the stars. 🌠",
+      "I love the way you love me. 🥺❤️",
+      "You're my safe space. 🛡️💗",
+      "You’re the warmth in my coldest days. 🔥💓",
+      "You turn my heart into poetry. 📝💕",
+      "You are my heart's favorite song. 🎼💘",
+      "You make love feel like magic. ✨❤️",
+      "I could spend a lifetime getting lost in your eyes. 👁️💞",
+      "You're the heartbeat of my joy. 🫀💝",
+      "I love you, endlessly and always. 🔁💖",
+      "You make my soul smile. 😄❤️",
+      "Even forever doesn't feel long enough with you. ⏳💞",
+      "You're my person. Always. 👫💓",
+      "You complete my sentences — and my heart. 💬❤️",
+      "You make life so beautiful. 🌸💖",
+      "Every part of me loves every part of you. 💕",
+      "You’re the spark in my every thought. ⚡💭",
+      "You’re my everything. 💝",
+      "There’s no one I’d rather do life with than you. 🛤️❤️",
+      "I thank the universe for you every day. 🌌🙏💖"
+    ];
+
+    function shuffleMessages(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    shuffleMessages(messages);
+
+    let index = 0;
+    function showMore() {
+      const messageElement = document.getElementById("extra-message");
+      messageElement.textContent = messages[index];
+      messageElement.style.display = "block";
+      index = (index + 1) % messages.length;
+    }
+  </script>
+</body>
+</html>
